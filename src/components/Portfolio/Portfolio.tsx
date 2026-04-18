@@ -61,18 +61,21 @@ const Portfolio: React.FC = () => {
       onMouseDown={handleMouseDown}
       style={{ cursor: isMouseDown ? 'grabbing' : 'grab' }}
     >
-      {/* LAYER 1: The Fixed Background (Never Scrolls) */}
-      <div className="fixed-scene-layer">
-        <div
-          className="portfolio-background"
-          style={{
-            transform: `translateX(${offsetX}px) translateY(${offsetY}px) rotateX(${offsetY * 0.05}deg) rotateY(${offsetX * -0.05}deg)`,
-          }}
-        />
-        <div className="portfolio-fog" />
-      </div>
+<div className="fixed-scene-layer">
+  <img
+    src="/jungle.webp"
+    alt="Jungle background"
+    className="portfolio-background"
+    fetchPriority="high"
+    decoding="async"
+    loading="eager"
+    style={{
+      transform: `translateX(${offsetX}px) translateY(${offsetY}px) rotateX(${offsetY * 0.05}deg) rotateY(${offsetX * -0.05}deg)`,
+    }}
+  />
+  <div className="portfolio-fog" />
+</div>
 
-      {/* LAYER 2: The Scrolling Content */}
       <div className="scroll-view-layer">
         <div className="portfolio-content-wrapper">
           <Link to="/" className="back-button">

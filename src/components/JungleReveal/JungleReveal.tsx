@@ -19,22 +19,28 @@ const JungleReveal: React.FC = () => {
       
       if (!isAnimating && !isRevealed) {
         setIsAnimating(true);
-        setIsRevealed(true); // Make button clickable immediately
+        setIsRevealed(true); 
         
-        // Faster animation timeout for mobile (matches CSS animation time)
         setTimeout(() => {
           setIsAnimating(false);
-        }, 600); // Mobile-only faster timeout
+        }, 600); 
       }
     }
   };
 
   const handleContainerClick = (e: React.MouseEvent<HTMLDivElement>) => {
     const target = e.target as HTMLElement;
-  // Allow clicks to pass through to leaves and button
     if (target.classList.contains('leaf')) {
       handleLeafClick(e as React.MouseEvent<HTMLImageElement>);
     }
+  };
+
+  // Reusable leaf attributes to keep the JSX clean
+  const commonLeafProps = {
+    decoding: "async" as const,
+    fetchPriority: "high" as const,
+    loading: "eager" as const,
+    onClick: handleLeafClick,
   };
 
   return (
@@ -53,40 +59,40 @@ const JungleReveal: React.FC = () => {
       </div>
 
       <img
-        src="/amgk_simx_210722.png"
+        {...commonLeafProps}
+        src="/amgk_simx_210722.webp"
         className="leaf top-left"
         alt="Top-left jungle leaves"
-        onClick={(e) => handleLeafClick(e)}
       />
       <img
-        src="/leaves.png"
+        {...commonLeafProps}
+        src="/leaves.webp"
         className="leaf top-right"
         alt="Top-right jungle leaves"
-        onClick={(e) => handleLeafClick(e)}
       />
       <img
+        {...commonLeafProps}
         src="/mid-leaf.webp"
         className="leaf middle-left"
         alt="Middle-left jungle leaves"
-        onClick={(e) => handleLeafClick(e)}
       />
       <img
+        {...commonLeafProps}
         src="/mid-leaf-r.webp"
         className="leaf middle-right"
         alt="Middle-right jungle leaves"
-        onClick={(e) => handleLeafClick(e)}
       />
       <img
-        src="/amgk_simx_210722.png"
+        {...commonLeafProps}
+        src="/amgk_simx_210722.webp"
         className="leaf bottom-left"
         alt="Bottom-left jungle leaves"
-        onClick={(e) => handleLeafClick(e)}
       />
       <img
-        src="/leaves.png"
+        {...commonLeafProps}
+        src="/leaves.webp"
         className="leaf bottom-right"
         alt="Bottom-right jungle leaves"
-        onClick={(e) => handleLeafClick(e)}
       />
     </div>
   );

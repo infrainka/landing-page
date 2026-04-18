@@ -13,17 +13,21 @@
 
 /* Full-screen 3D background image */
 .portfolio-background {
-  position: absolute;
+position: absolute;
   top: -5%;
   left: -5%;
   width: 110%;
   height: 110%;
-  background-image: url('/jungle.webp');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  
+  object-fit: cover; 
+  object-position: center; 
   will-change: transform;
   transform-style: preserve-3d;
+  
+  /* Prevents native image ghost-dragging from ruining your JS parallax */
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
 /* Black fog overlay for depth effect */
