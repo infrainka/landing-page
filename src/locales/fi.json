@@ -1,0 +1,22 @@
+{
+  "enter": "Astu HEIMOon",
+  "back": "← Takaisin aloitussivulle",
+  "role": "Full-Stack Verkkokehittäjä",
+  "org": "HEIMO Osuuskunnan Työntekijä",
+  "experience": "Vuotta kokemusta",
+  "projectsCompleted": "Projektia valmistunut",
+  "clientSatisfaction": "Asiakastyytyväisyys",
+  "services": "Erikoistuneet Palvelut",
+  "service1Title": "Verkkokauppojen modernisointi",
+  "service1Desc": "Verkkokauppa-alustojen uudistaminen huippusuorituskyvyn, intuitiivisen käyttökokemuksen ja parempien konversioiden saavuttamiseksi.",
+  "service2Title": "Verkkokehitys",
+  "service2Desc": "Räätälöityjen, responsiivisten verkkosivustojen rakentaminen sinun tarpeidesi mukaan.",
+  "service3Title": "Konfigurointi ja vianetsintä",
+  "service3Desc": "Tehokas vianmääritys, mutkaton konfigurointi ja olemassa olevien verkkosivustojen ja sovellusten nopea korjaus.",
+  "techStack": "Teknologia Stack",
+  "letsTalk": "Tehdään yhteistyötä",
+  "contact": "Ota yhteyttä",
+  "email": "Sähköposti",
+  "phone": "Puhelin",
+  "lang": "EN"
+}
